@@ -6,7 +6,7 @@ messageAllow=window.messageAllow||[//["origin"...]
   "https://ioself.github.io",
   "http://ioself.github.io"
 ]
-let messageChildWindow=window.messageChildWindow||{}//{"origin":element.contentWindow...}
+messageChildWindow=window.messageChildWindow||{}//{"origin":element.contentWindow...}
 let _messageRecept=(e)=>{}
 window.addEventListener("message",e=>{
   if (typeof e.data!=="object"||e.data.author!=="corsFileDownload")return
