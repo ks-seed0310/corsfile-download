@@ -1,11 +1,4 @@
-messageAllow=window.messageAllow||[//["origin"...]
-  "https://ks-seed0310.github.io",
-  "http://ks-seed0310.github.io",
-  "https://ochcinfo.github.io",
-  "http://ochcinfo.github.io",
-  "https://ioself.github.io",
-  "http://ioself.github.io"
-]
+messageAllow=window.messageAllow||[]//["origin"...]
 messageChildWindow=window.messageChildWindow||{}//{"origin":element.contentWindow...}
 let _messageRecept=(e)=>{}
 window.addEventListener("message",e=>{
