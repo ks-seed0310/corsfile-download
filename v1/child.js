@@ -1,4 +1,4 @@
-let messageAllow=[//["origin"...]
+let messageAllow=window.messageAllow||[//["origin"...]
   "https://ks-seed0310.github.io",
   "http://ks-seed0310.github.io",
   "https://ochcinfo.github.io",
