@@ -9,6 +9,7 @@ let messageAllow=window.messageAllow||[//["origin"...]
 let messageChildWindow=window.messageChildWindow||{}//{"origin":element.contentWindow...}
 let _messageRecept=(e)=>{}
 window.addEventListener("message",e=>{
+  if (typeof data!=="object"||e.data.author!=="corsFileDownload")return
   if (!messageAllow.includes(e.origin)){
     console.warn("Status 403: Error Forbidden\n\tOrigin that sent the message: ",e.origin,"\n\tOrigin that received the message: ",location.origin,"Message Not Resolved.")
     return
@@ -33,7 +34,7 @@ async function fileDownload(url_){
       _messaeRecept=(e)=>{
         r(200)
       }
-      child.postMessage({url:url.href},url.origin)
+      child.postMessage({url:url.href,author:"corsFileDownload",author2:"ParentNode"},url.origin)
     })
     if (res===200){
       return true
