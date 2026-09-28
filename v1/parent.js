@@ -9,7 +9,7 @@ let messageAllow=window.messageAllow||[//["origin"...]
 let messageChildWindow=window.messageChildWindow||{}//{"origin":element.contentWindow...}
 let _messageRecept=(e)=>{}
 window.addEventListener("message",e=>{
-  if (typeof data!=="object"||e.data.author!=="corsFileDownload")return
+  if (typeof e.data!=="object"||e.data.author!=="corsFileDownload")return
   if (!messageAllow.includes(e.origin)){
     console.warn("Status 403: Error Forbidden\n\tOrigin that sent the message: ",e.origin,"\n\tOrigin that received the message: ",location.origin,"Message Not Resolved.")
     return
