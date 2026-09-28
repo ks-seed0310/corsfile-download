@@ -31,7 +31,7 @@ async function fileDownload(url_){
       return false
     }
     const res=await new Promise(r=>{
-      _messaeRecept=(e)=>{
+      _messageRecept=(e)=>{
         r(200)
       }
       child.postMessage({url:url.href,author:"corsFileDownload",author2:"ParentNode"},url.origin)
