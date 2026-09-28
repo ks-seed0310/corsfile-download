@@ -1,11 +1,4 @@
-messageAllow=window.messageAllow||[//["origin"...]
-  "https://ks-seed0310.github.io",
-  "http://ks-seed0310.github.io",
-  "https://ochcinfo.github.io",
-  "http://ochcinfo.github.io",
-  "https://ioself.github.io",
-  "http://ioself.github.io"
-]
+messageAllow=window.messageAllow||[]//["origin"...]]
 const dl=document.createElement("a")
 dl.download=""
 window.addEventListener("message",e=>{
